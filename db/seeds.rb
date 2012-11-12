@@ -1,7 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+IncidentType.create([{ description: 'internal',
+                       definition:  'incidents are restricted to loggon in users.' },
+                     { description: 'internal + email',
+                       definition:  'like 1 + incidents are send out as email if possible' },
+                     { description: 'internal + portal',
+                       definition:  'like 1 + incidents are posted on the portal' },
+                     { description: 'internal + email + portal',
+                       definition:  'Incidents are posted internally, send out as email and posted on the portal' }])
