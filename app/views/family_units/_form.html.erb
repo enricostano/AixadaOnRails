@@ -1,0 +1,29 @@
+<%= form_for(@family_unit) do |f| %>
+  <% if @family_unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@family_unit.errors.count, "error") %> prohibited this family_unit from being saved:</h2>
+
+      <ul>
+      <% @family_unit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :mentor_familyunit_id %><br />
+    <%= f.number_field :mentor_familyunit_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

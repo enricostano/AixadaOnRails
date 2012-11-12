@@ -1,0 +1,27 @@
+<h1>Listing family_units</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Active</th>
+    <th>Mentor familyunit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @family_units.each do |family_unit| %>
+  <tr>
+    <td><%= family_unit.name %></td>
+    <td><%= family_unit.active %></td>
+    <td><%= family_unit.mentor_familyunit_id %></td>
+    <td><%= link_to 'Show', family_unit %></td>
+    <td><%= link_to 'Edit', edit_family_unit_path(family_unit) %></td>
+    <td><%= link_to 'Destroy', family_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Family unit', new_family_unit_path %>
