@@ -1,4 +1,6 @@
 Aixada::Application.routes.draw do
+  resources :incidents
+
   devise_for :users
 
   resources :members
