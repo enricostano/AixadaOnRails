@@ -1,0 +1,49 @@
+<h1>Listing members</h1>
+
+<table>
+  <tr>
+    <th>Custom member ref</th>
+    <th>Family unit</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Nif</th>
+    <th>Zip</th>
+    <th>City</th>
+    <th>Phone1</th>
+    <th>Phone2</th>
+    <th>Web</th>
+    <th>Notes</th>
+    <th>Active</th>
+    <th>Participant</th>
+    <th>Adult</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @members.each do |member| %>
+  <tr>
+    <td><%= member.custom_member_ref %></td>
+    <td><%= member.family_unit_id %></td>
+    <td><%= member.name %></td>
+    <td><%= member.address %></td>
+    <td><%= member.nif %></td>
+    <td><%= member.zip %></td>
+    <td><%= member.city %></td>
+    <td><%= member.phone1 %></td>
+    <td><%= member.phone2 %></td>
+    <td><%= member.web %></td>
+    <td><%= member.notes %></td>
+    <td><%= member.active %></td>
+    <td><%= member.participant %></td>
+    <td><%= member.adult %></td>
+    <td><%= link_to 'Show', member %></td>
+    <td><%= link_to 'Edit', edit_member_path(member) %></td>
+    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Member', new_member_path %>

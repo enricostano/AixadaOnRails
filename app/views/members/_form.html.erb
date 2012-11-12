@@ -1,0 +1,73 @@
+<%= form_for(@member) do |f| %>
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% @member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :custom_member_ref %><br />
+    <%= f.text_field :custom_member_ref %>
+  </div>
+  <div class="field">
+    <%= f.label :family_unit_id %><br />
+    <%= f.number_field :family_unit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :nif %><br />
+    <%= f.text_field :nif %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :phone1 %><br />
+    <%= f.text_field :phone1 %>
+  </div>
+  <div class="field">
+    <%= f.label :phone2 %><br />
+    <%= f.text_field :phone2 %>
+  </div>
+  <div class="field">
+    <%= f.label :web %><br />
+    <%= f.text_field :web %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :participant %><br />
+    <%= f.check_box :participant %>
+  </div>
+  <div class="field">
+    <%= f.label :adult %><br />
+    <%= f.check_box :adult %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

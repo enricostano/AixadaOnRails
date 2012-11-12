@@ -1,4 +1,6 @@
 Aixada::Application.routes.draw do
+  resources :members
+
   resources :family_units
 
   # The priority is based upon order of creation:

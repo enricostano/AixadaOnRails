@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  custom_member_ref: MyString
+  family_unit_id: 1
+  name: MyString
+  address: MyString
+  nif: MyString
+  zip: MyString
+  city: MyString
+  phone1: MyString
+  phone2: MyString
+  web: MyString
+  notes: MyText
+  active: false
+  participant: false
+  adult: false
+
+two:
+  custom_member_ref: MyString
+  family_unit_id: 1
+  name: MyString
+  address: MyString
+  nif: MyString
+  zip: MyString
+  city: MyString
+  phone1: MyString
+  phone2: MyString
+  web: MyString
+  notes: MyText
+  active: false
+  participant: false
+  adult: false
