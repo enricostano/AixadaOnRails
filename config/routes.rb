@@ -1,4 +1,6 @@
 Aixada::Application.routes.draw do
+  devise_for :users
+
   resources :members
 
   resources :family_units
