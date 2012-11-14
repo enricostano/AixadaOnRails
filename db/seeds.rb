@@ -11,7 +11,7 @@ FamilyUnit.create([ name: 'admin' ])
 
 Member.create([ name: 'admin',
                 family_unit: FamilyUnit.first,
-                custom_member_ref: 'que coño es esto',
+                custom_member_ref: 'que es esto',
                 address: 'c/ de la Aixada, 34',
                 nif: '12345678901',
                 zip: '74024',
