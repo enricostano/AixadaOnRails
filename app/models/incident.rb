@@ -1,14 +1,14 @@
 class Incident < ActiveRecord::Base
-  attr_accessible :incident_type_id
+  attr_accessible :incident_type, :user, :subject, :details
   
   # Relationships
-  has_one :user
+  belongs_to :user
   belongs_to :incident_type
  
-  def get_incident_listing(from_date, to_date, type)
-   self.joins(
-     .where(:created_at => from_date..to_date)
-     .order("created_at DESC")
+  #def get_incident_listing(from_date, to_date, type)
+   #self.joins(
+     #.where(:created_at => from_date..to_date)
+     #.order("created_at DESC")
               
 
     #select
