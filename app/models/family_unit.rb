@@ -1,5 +1,5 @@
 class FamilyUnit < ActiveRecord::Base
-  attr_accessible :active, :mentor_familyunit_id, :name
+  attr_accessible :active, :mentor_familyunit_id, :name, :member_id
 
   # Relationships
   belongs_to :member
