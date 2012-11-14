@@ -1,5 +1,5 @@
 class Incident < ActiveRecord::Base
-   attr_accessible :incident_type_id
+  attr_accessible :incident_type_id
   
   # Relationships
   has_one :user
