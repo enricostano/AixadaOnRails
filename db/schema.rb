@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114145038) do
+ActiveRecord::Schema.define(:version => 20121114175657) do
 
   create_table "family_units", :force => true do |t|
     t.string   "name",                                   :null => false
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(:version => 20121114145038) do
 
   create_table "members", :force => true do |t|
     t.string   "custom_member_ref",                                 :null => false
-    t.integer  "family_unit_id",                                    :null => false
     t.string   "name",                                              :null => false
     t.string   "address",                                           :null => false
     t.string   "nif",               :limit => 15
@@ -56,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20121114145038) do
     t.boolean  "adult",                           :default => true
     t.datetime "created_at",                                        :null => false
     t.datetime "updated_at",                                        :null => false
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
