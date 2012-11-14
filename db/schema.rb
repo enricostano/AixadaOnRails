@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121112172449) do
+ActiveRecord::Schema.define(:version => 20121114135201) do
 
   create_table "family_units", :force => true do |t|
     t.string   "name",                                   :null => false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20121112172449) do
   create_table "incidents", :force => true do |t|
     t.string   "subject",                                            :null => false
     t.integer  "incident_type_id",                                   :null => false
-    t.integer  "operator_id",                                        :null => false
+    t.integer  "user_id",                                            :null => false
     t.text     "details",                                            :null => false
     t.integer  "priority",                       :default => 3
     t.string   "string",           :limit => 10, :default => "Open"
