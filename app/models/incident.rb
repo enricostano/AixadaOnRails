@@ -1,14 +1,17 @@
 class Incident < ActiveRecord::Base
-  attr_accessible :incident_type, :user, :subject, :details
+  attr_accessible :incident_type, :user, :subject, :details, :provider
   
   # Relationships
   belongs_to :user
   belongs_to :incident_type
- 
-  #def get_incident_listing(from_date, to_date, type)
-   #self.joins(
-     #.where(:created_at => from_date..to_date)
+  belongs_to :provider
+
+  scope :between, lambda { | from_date, to_date | where('created_at BETWEEN ? AND ?', from_date, to_date) }
+
+  def self.get_incident_listing(from_date, to_date, type)
+   self.joins(:user).where(:created_at => from_date..to_date)
      #.order("created_at DESC")
+  end
               
 
     #select

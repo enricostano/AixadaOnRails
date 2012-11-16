@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121116125547) do
+ActiveRecord::Schema.define(:version => 20121116135349) do
 
   create_table "family_units", :force => true do |t|
     t.string   "name",                                   :null => false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20121116125547) do
     t.string   "status",           :limit => 10, :default => "Open"
     t.datetime "created_at",                                         :null => false
     t.datetime "updated_at",                                         :null => false
+    t.integer  "provider_id"
   end
 
   create_table "members", :force => true do |t|
