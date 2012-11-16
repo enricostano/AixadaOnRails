@@ -22,6 +22,8 @@ Member.create([ name:              'admin',
                 zip:               '74024',
                 city:              'Barcelona' ])
 
+Provider.create([ name:        'Fracking Good Provider coop',
+                  family_unit: FamilyUnit.first ])
 
 Incident.create([ subject:       'My first ever incident',
                   incident_type: IncidentType.first,
