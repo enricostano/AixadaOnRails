@@ -11,6 +11,8 @@ Aixada::Application.routes.draw do
 
   resources :family_units
 
+  get 'incident_listing' => 'incidents#incident_listing', :defaults => { :format => 'xml'}
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

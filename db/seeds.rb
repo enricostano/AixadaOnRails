@@ -28,4 +28,5 @@ Provider.create([ name:        'Fracking Good Provider coop',
 Incident.create([ subject:       'My first ever incident',
                   incident_type: IncidentType.first,
                   user:          User.first,
-                  details:       'Vaya asco de zanahorias...' ])
+                  details:       'Vaya asco de zanahorias...',
+                  provider:      Provider.first ])
