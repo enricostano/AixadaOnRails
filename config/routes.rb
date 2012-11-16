@@ -1,4 +1,6 @@
 Aixada::Application.routes.draw do
+  resources :providers
+
   resources :incident_types
 
   resources :incidents
