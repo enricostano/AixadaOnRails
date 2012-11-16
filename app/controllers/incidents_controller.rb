@@ -82,8 +82,8 @@ class IncidentsController < ApplicationController
   end
 
   # GET /incident_listing
-  def incident_listing(from_date, to_date, incident_type)
-    @incident_listing = Incident.between(from_date, to_date).includes(:user, :provider, :incident_type).where('incident_type = ?', incident_type).order("created_at DESC")
+  def incident_listing(from_date, to_date, incident_type_id)
+    @incident_listing = Incident.between(from_date, to_date).includes(:user, :provider, :incident_type).where('incident_type_id = ?', incident_type_id).order("created_at DESC")
 
     format.xml { render xml: @incident_listing }
   end
